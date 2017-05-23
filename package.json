@@ -5,7 +5,7 @@
   "engines": {
     "node": "7.6"
   },
-  "main": "service.js",
+  "main": "api-server.js",
   "scripts": {
     "test": "node test.js"
   },
@@ -17,6 +17,6 @@
     "body-parser": "^1.17.2",
     "cors": "^2.8.3",
     "express": "^4.15.3",
-    "soa-demo-service": "file:../soa-demo-service"
+    "soa-demo-service": "jaw977/soa-demo-service"
   }
 }

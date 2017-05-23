@@ -1,6 +1,7 @@
-var service = require('./service.js');
-var seneca = service.seneca;
 const Promise = require('bluebird');
+const Service = require('soa-demo-service');
+const service = new Service('api');
+service.clients();
 
 const act = Promise.promisify(service.seneca.act, {context:service.seneca});
 

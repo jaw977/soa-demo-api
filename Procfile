@@ -1,1 +1,1 @@
-web: node service.js --listen
+web: node api-server.js
