@@ -17,6 +17,6 @@
     "body-parser": "^1.17.2",
     "cors": "^2.8.3",
     "express": "^4.15.3",
-    "soa-demo-service": "jaw977/soa-demo-service"
+    "soa-demo-service-amqp": "jaw977/soa-demo-service-amqp"
   }
 }

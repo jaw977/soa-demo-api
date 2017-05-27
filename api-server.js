@@ -1,6 +1,5 @@
-const Service = require('soa-demo-service');
+const Service = require('soa-demo-service-amqp');
 const service = new Service('api');
-service.clients();
 
 const express = require('express')
 const bodyParser = require('body-parser');
@@ -11,9 +10,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.post('/', (req, res) => {
-	service.seneca.act(req.body, (err, result) => {
-		res.send(JSON.stringify(result))
-	});
+	service.request(req.body).then( json => { res.send(json); });
 });
 
 app.listen(process.env.PORT);
