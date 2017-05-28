@@ -10,7 +10,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.post('/', (req, res) => {
-	service.request(req.body).then( json => { res.send(json); });
+	delete req.body.event;
+	service.request(req.body).then( json => { res.json(json); });
 });
 
 app.listen(process.env.PORT);
